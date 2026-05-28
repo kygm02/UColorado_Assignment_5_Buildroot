@@ -29,8 +29,6 @@ jobs:
             with:
                 ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           
-          - name: Fix permissions
-            run: setfacl -R --remove-all . && setfacl -R --remove-default .
           
           - name: Run full test
             env:
